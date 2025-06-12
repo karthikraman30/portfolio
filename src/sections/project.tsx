@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Database, Globe, Star, Code } from 'lucide-react';
+import { Calendar, Database, Globe, Star, Code, Github } from 'lucide-react';
 
 const ProjectSection: React.FC = () => {
     const projects = [
@@ -8,6 +8,7 @@ const ProjectSection: React.FC = () => {
             year: "2024",
             description: "A machine learning project that predicts real estate prices for apartments and villas based on location preferences, amenities, and nearby facilities like schools, hospitals, and highways.",
             technologies: ["Python", "Machine Learning", "Data Analysis", "Scikit-learn"],
+            githubUrl: "https://github.com/karthikraman30/house-price-prediction",
             category: "Machine Learning",
             featured: true,
             icon: <Database className="text-green-400" size={24} />
@@ -96,6 +97,21 @@ const ProjectSection: React.FC = () => {
                             <p className="text-gray-300 leading-relaxed mb-6 group-hover:text-white transition-colors duration-300">
                                 {project.description}
                             </p>
+
+                            {/* GitHub Link */}
+                            {project.githubUrl && (
+                                <div className="mt-4">
+                                    <a 
+                                        href={project.githubUrl} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer" 
+                                        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-green-400/10 hover:bg-green-400/20 transition-all duration-300 text-green-400 hover:text-white border border-green-400/20 hover:border-green-400/40"
+                                    >
+                                        <Github size={20} />
+                                        <span>View on GitHub</span>
+                                    </a>
+                                </div>
+                            )}
 
                             {/* Technologies */}
                             <div className="flex flex-wrap gap-2 mb-6">
