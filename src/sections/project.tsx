@@ -8,9 +8,12 @@ const ProjectSection: React.FC = () => {
             year: "2024",
             description: "A machine learning project that predicts real estate prices for apartments and villas based on location preferences, amenities, and nearby facilities like schools, hospitals, and highways.",
             technologies: ["Python", "Machine Learning", "Data Analysis", "Scikit-learn"],
-            githubUrl: "https://github.com/karthikraman30/house-price-prediction",
             category: "Machine Learning",
             featured: true,
+            github: {
+                url: "https://github.com/karthikraman30/california-house-price-prediction.git",
+                label: "View on GitHub"
+            },
             icon: <Database className="text-green-400" size={24} />
         },
         {
@@ -94,35 +97,37 @@ const ProjectSection: React.FC = () => {
                             </div>
 
                             {/* Project Description */}
-                            <p className="text-gray-300 leading-relaxed mb-6 group-hover:text-white transition-colors duration-300">
-                                {project.description}
-                            </p>
+                            <div className="space-y-6">
+                                <p className="text-gray-300 leading-relaxed group-hover:text-white transition-colors duration-300">
+                                    {project.description}
+                                </p>
 
-                            {/* GitHub Link */}
-                            {project.githubUrl && (
-                                <div className="mt-4">
-                                    <a 
-                                        href={project.githubUrl} 
-                                        target="_blank" 
-                                        rel="noopener noreferrer" 
-                                        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-green-400/10 hover:bg-green-400/20 transition-all duration-300 text-green-400 hover:text-white border border-green-400/20 hover:border-green-400/40"
-                                    >
-                                        <Github size={20} />
-                                        <span>View on GitHub</span>
-                                    </a>
+                                {/* Technologies */}
+                                <div className="flex flex-wrap gap-2 mb-6">
+                                    {project.technologies.map((tech, techIndex) => (
+                                        <span
+                                            key={techIndex}
+                                            className="text-sm px-2 py-1 bg-gray-700/50 rounded-full text-gray-300 hover:bg-gray-700/70 hover:text-white transition-colors duration-300"
+                                        >
+                                            {tech}
+                                        </span>
+                                    ))}
                                 </div>
-                            )}
 
-                            {/* Technologies */}
-                            <div className="flex flex-wrap gap-2 mb-6">
-                                {project.technologies.map((tech, techIndex) => (
-                                    <span
-                                        key={techIndex}
-                                        className="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-sm font-medium border border-green-500/20 hover:bg-green-500/20 transition-colors duration-300"
-                                    >
-                                        {tech}
-                                    </span>
-                                ))}
+                                {/* GitHub Link */}
+                                {project.github && (
+                                    <div className="mt-4">
+                                        <a 
+                                            href={project.github.url} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer" 
+                                            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-green-400/10 hover:bg-green-400/20 transition-all duration-300 text-green-400 hover:text-white border border-green-400/20 hover:border-green-400/40"
+                                        >
+                                            <Github size={20} />
+                                            <span className="ml-2">{project.github.label}</span>
+                                        </a>
+                                    </div>
+                                )}
                             </div>
 
                             {/* Hover effect overlay */}
