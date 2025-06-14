@@ -36,18 +36,6 @@ const SkillsSection: React.FC = () => {
             url: "https://leetcode.com/u/kart2006/",
             color: "from-yellow-500 to-amber-500"
         },
-        {
-            platform: "GitHub",
-            username: "karthikraman30",
-            url: "https://github.com/karthikraman30",
-            color: "from-gray-600 to-gray-700"
-        },
-        {
-            platform: "LinkedIn",
-            username: "karthikraman",
-            url: "https://www.linkedin.com/in/karthikramanbalamurugan",
-            color: "from-blue-600 to-blue-700"
-        }
     ];
 
     return (
