@@ -54,7 +54,7 @@ const HeroSection: React.FC = () => {
                         </h1>
 
                         <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed animate-fade-in-up">
-                            I love building applications that solve real-world problems with{' '}
+                            I love building applications that solve real-world problems with modern technologies and creative solutions{' '}
                         </p>
                         <div className="w-20 h-0.5 bg-gradient-to-r from-green-400 to-blue-500 mx-auto animate-expand"></div>
                     </div>
