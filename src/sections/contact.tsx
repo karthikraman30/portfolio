@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Send, MessageCircle, User, FileText, Github, Linkedin, Code } from 'lucide-react';
+import { Mail, Send, MessageCircle, User, FileText, Github, Linkedin, Instagram } from 'lucide-react';
 import * as emailjs from '@emailjs/browser';
 
 const ContactSection: React.FC = () => {
@@ -74,9 +74,9 @@ const ContactSection: React.FC = () => {
             bg: "hover:bg-blue-900/20"
         },
         {
-            icon: Code,
-            label: "Codeforces",
-            href: "https://codeforces.com/profile/karthik300106",
+            icon: Instagram,
+            label: "Instagram",
+            href: "https://www.instagram.com/karthik_raman30/?next=/",
             color: "hover:text-red-400",
             bg: "hover:bg-red-900/20"
         }
