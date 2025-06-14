@@ -6,8 +6,8 @@ const ProjectSection: React.FC = () => {
         {
             title: "House Price Prediction Model",
             year: "2024",
-            description: "A machine learning project that predicts real estate prices for apartments and villas based on location preferences, amenities, and nearby facilities like schools, hospitals, and highways.",
-            technologies: ["Python", "Machine Learning", "Data Analysis", "Scikit-learn"],
+            description: "A web-based house price prediction system for California that uses XGBoost machine learning to provide accurate price estimates. Features interactive visualizations, feature importance analysis, location-based insights, and detailed prediction breakdowns. Built with Python, Streamlit, and Plotly for a seamless user experience.",
+            technologies: ["Python", "Machine Learning", "XGBoost", "Streamlit", "Plotly", "Pandas", "NumPy"],
             category: "Machine Learning",
             featured: true,
             github: {
@@ -19,10 +19,14 @@ const ProjectSection: React.FC = () => {
         {
             title: "Online Competitive Coding Platform Database",
             year: "2024",
-            description: "A comprehensive database management system designed for competitive programming platforms, managing user profiles, problem sets, submissions, and performance analytics.",
-            technologies: ["Database Design", "SQL", "System Architecture"],
+            description: "A collaborative coding platform database that connects developers worldwide through user management, social features, and competitive programming systems. Features secure authentication, real-time leaderboards, and country-based tracking with robust PostgreSQL integration.",
+            technologies: ["PostgreSQL", "SQL", "Database Design", "Schema Design", "Real-time Systems"],
             category: "Database",
             featured: true,
+            github: {
+                url: "https://github.com/karthikraman30/Coding_Platform.git",
+                label: "View on GitHub"
+            },
             icon: <Code className="text-blue-400" size={24} />
         },
         {
@@ -32,6 +36,10 @@ const ProjectSection: React.FC = () => {
             technologies: ["C++", "Data Structures", "VSCode Extension", "Tree Algorithms"],
             category: "Desktop App",
             featured: true,
+            github: {
+                url: "https://github.com/karthikraman30/code-snippet-manager.git",
+                label: "View on GitHub"
+            },
             icon: <Globe className="text-purple-400" size={24} />
         },
         {
@@ -41,6 +49,10 @@ const ProjectSection: React.FC = () => {
             technologies: ["JavaScript", "HTML", "CSS", "Web Development"],
             category: "Web Development",
             featured: false,
+            github: {
+                url: "https://github.com/karthikraman30/algorithm-web-apps",
+                label: "View on GitHub"
+            },
             icon: <Star className="text-yellow-400" size={24} />
         }
     ];
@@ -117,10 +129,10 @@ const ProjectSection: React.FC = () => {
                                 {/* GitHub Link */}
                                 {project.github && (
                                     <div className="mt-4">
-                                        <a 
-                                            href={project.github.url} 
-                                            target="_blank" 
-                                            rel="noopener noreferrer" 
+                                        <a
+                                            href={project.github.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-green-400/10 hover:bg-green-400/20 transition-all duration-300 text-green-400 hover:text-white border border-green-400/20 hover:border-green-400/40"
                                         >
                                             <Github size={20} />
