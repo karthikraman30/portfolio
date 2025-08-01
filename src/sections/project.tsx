@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Database, Globe, Star, Code, Github } from 'lucide-react';
+import { Calendar, Database, Globe, Star, Code, Github, Headphones } from 'lucide-react';
 
 const ProjectSection: React.FC = () => {
     const projects = [
@@ -54,6 +54,19 @@ const ProjectSection: React.FC = () => {
                 label: "View on GitHub"
             },
             icon: <Star className="text-yellow-400" size={24} />
+        },
+        {
+            title: "Speech to Text with AI Response",
+            year: "2025",
+            description: "Built a web app that converts speech to text using Whisper and generates AI responses with Ollama. Implemented real-time audio processing and user-friendly interface.",
+            technologies: ["Whisper", "Ollama", "Speech Recognition", "AI/ML", "Real-time Processing", "Web App"],
+            category: "AI",
+            featured: true,
+            github: {
+                url: "https://github.com/karthikraman30/text_to_speech_response",
+                label: "View on GitHub"
+            },
+            icon: <Headphones className="text-blue-400" size={24} />
         }
     ];
 
