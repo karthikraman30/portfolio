@@ -72,7 +72,7 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="/assets/resume.pdf"
+              href="/assets/karthik_raman_CV_personal_uae.pdf"
               download="Karthik_Raman_Resume.pdf"
               className="block w-full text-center px-4 py-2 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg text-white font-medium hover:shadow-lg transition-all duration-300"
               onClick={() => setIsMobileMenuOpen(false)}
